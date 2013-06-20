@@ -1,0 +1,114 @@
+html, body {
+	background: #F2F2F2;
+	height: 100%;
+}
+
+body {
+	background: #F2F2F2;
+	color: #555;
+	font-family: Geneva, sans-serif;
+	font-size: 12px;
+}
+
+.pattern {
+	background: url('../images/home_background.jpg') repeat-x #EEE;
+}
+
+div#box {
+	margin-left: 300px;
+	width: 450px;
+}
+
+	div#box a {
+		text-decoration: none;
+		color: #555;
+	}
+	div#box a:hover {
+		font-style: italic;
+	}
+
+.separator {
+	margin: 20px 0;
+	border-top: 1px dashed #999;
+}
+
+.gray {
+	color: #999;
+}
+
+div#left {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 250px;
+	background: url('../images/zigzag_bw.png') repeat-y;
+	height: 100%;
+}
+
+div#left p {
+	margin: 245px 0 0 43px;
+	font-style: italic;
+	text-align: left;
+}
+
+div#left img.logo {
+	position: absolute;
+	width: 218px;
+	height: 71px;
+	margin: 42px 0 70px 42px;
+	border: none;
+}
+div#left img.l2, div#left img.l3 {
+	opacity: 0;
+}
+
+div#left ul {
+	font-family: Futura, sans-serif;
+	text-transform: uppercase;
+	font-size: 10px;
+	list-style: none;
+}
+
+div#left ul li {
+	height: 30px;
+}
+
+div#left ul li a {
+	text-decoration: none;
+	color: #666;
+	padding-left: 42px;
+}
+div#left ul li a:hover {
+	color: #000;
+	padding-left: 42px;
+}
+#menu { position: absolute; left: 0; top: 180px; }
+#menu li { display: block; z-index: 1000; position: relative; zoom: 1; }
+#menu li a { display: block; padding: 7px 0 7px 28px; z-index: 1000; line-height: 14px; vertical-align: middle; zoom: 1; }
+#menu li.background { background: url('../images/list-style.png') no-repeat left center; position: absolute; font-size: 1px; height: 10px; width: 5px; z-index: 5; }
+
+#collectionMenu { position: absolute; left: 42px; top: 320px; }
+#collectionMenu li { color: #999; cursor: pointer!important; }
+#collectionMenu li:hover { color: #333; }
+
+
+div#collection {
+    width: 100%;
+    margin: 0 auto;
+}
+
+div#collection div.scroller {
+    height: 465px;
+    width: 6480px;
+    position: relative;
+    clear: left;
+    overflow-y: hidden;
+}
+div#collection div.scroller div.panel {
+    float: left;
+    margin: 0 5px;
+}
+div#collection div.scroller div.first {
+    margin-left: 255px;
+}
+

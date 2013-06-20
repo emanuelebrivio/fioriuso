@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//IT" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" media="screen" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" media="screen" type="text/css" href="css/style_copy.css" />
+	<script type="text/javascript" src="js/mootools-core.js"></script>
+	<script type="text/javascript" src="js/mootools-more.js"></script>
+	<script type="text/javascript" src="js/Fx.MorphList.js"></script>
+	<script type="text/javascript" src="js/ScrollSpy-yui-compressed.js"></script>
+	<script type="text/javascript">
+		window.addEvent('domready', function(){
+			var morph = new Fx.MorphList('menu');
+			var to = new Array('fioriuso','xs','africa');
+			var current = 1;
+			$('left').setStyle('opacity','0.9');
+			
+			$$('#collectionMenu li').addEvent('click', function(event){
+			    var scroll = new Fx.Scroll(window, { offset: { x:-255, y:0 }} ).toElement(to[$(this).get('value')]);
+			});
+			
+			/* Spy Scrolling for Logo Tweening */
+			var spy1 = new ScrollSpy({ 
+			    mode: 'horizontal', min: 0, max: 2300,
+			    onEnter: function () { $$('.l1').fade('in'); $$('.l2').fade('out'); $$('.l3').fade('out'); }
+			});
+			var spy2 = new ScrollSpy({ 
+			    mode: 'horizontal', min: 2301, max: 4227,
+			    onEnter: function () { $$('.l1').fade('out'); $$('.l2').fade('in'); $$('.l3').fade('out'); }
+			});
+			var spy3 = new ScrollSpy({ 
+			    mode: 'horizontal', min: 4228,
+			    onEnter: function () { $$('.l1').fade('out'); $$('.l2').fade('out'); $$('.l3').fade('in'); }
+			});		
+		});
+	</script>
+	<title>fiorRIuso</title>
+</head>
+
+<body>
+	<div id="collection">
+		<div class="scroller" id="fioriuso">
+			<div class="panel first"><img src="collection/t_00icone-fiori.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/t_innaffiatoio.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/t_01tulipano-elettrico.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/t_02mazzo.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/t_03calla-smisurata.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/t_04girasole.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/t_05gerbera-rotante.jpg" alt="" /></div>
+			<div class="panel" id="xs"><img src="collection/x_00fiorino.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/x_01fiorino.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/x_02fiorino.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/x_03fiorino.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/x_04fiorino.jpg" alt="" /></div>
+			<div class="panel" id="africa"><img src="collection/a_00africa.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/a_01africa.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/a_02africa.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/a_03africa.jpg" alt="" /></div>
+			<div class="panel"><img src="collection/a_04africa.jpg" alt="" /></div>
+		</div>
+	</div>
+	
+	<div id="left">
+		<a href="index.html" title="fioRIuso - da cosa nasce rosa">
+			<img src="images/logo_renew.png" alt="fioRIuso - da cosa nasce rosa" class="logo l1" />
+			<img src="images/logo_xs.png" alt="fioRIuso - da cosa nasce rosa" class="logo l2" />
+			<img src="images/logo_africa.png" alt="fioRIuso - da cosa nasce rosa" class="logo l3" />
+		</a>
+		<div>
+		<ul id="menu">
+			<li><a href="progetto.html" title="consulta il progetto">Il Progetto</a></li>
+			<li><a href="collection.html" title="guarda la collezione" class="current">La Collezione</a></li>
+			<li><a href="contact.html" title="contattami">Contact</a></li>
+		</ul>
+		
+		<ul id="collectionMenu">
+			<li value="0">Fioriuso</li>
+			<li value="1">Fioriuso XS</li>
+			<li value="2">La Mia Africa</li>
+		</ul>
+		</div>
+	</div>
+	
+	
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4196364-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
